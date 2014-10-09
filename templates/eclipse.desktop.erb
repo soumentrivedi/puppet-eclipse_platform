@@ -1,0 +1,13 @@
+[Desktop Entry]
+
+Encoding=UTF-8
+Name=Eclipse <%= scope.lookupvar('eclipse_platform::params::eclipseflavour') %>
+Type=Application
+Exec=<%= scope.lookupvar('eclipse_platform::params::installpath') %>eclipse/eclipse
+Terminal=false
+Icon=<%= scope.lookupvar('eclipse_platform::params::installpath') %>eclipse/icon.xpm
+Comment=Eclipse Integrated Development Environment
+NoDisplay=false
+Categories=Development;IDE
+Categories=GNOME;Application;Development;
+StartupNotify=true
