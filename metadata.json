@@ -1,14 +1,14 @@
 {
   "author": "soumen",
   "dependencies": [],
-  "description": "UNKNOWN",
-  "license": "Apache License, Version 2.0",
-  "name": "eclipse_platform",
+  "description": "Eclipse Platform for Puppet development (using Geppetto)",
+  "license": "Eclipse Public License - v 1.0",
+  "name": "soumentrivedi/puppet-eclipse_platform",
   "operatingsystem_support": [],
   "project_page": "UNKNOWN",
   "requirements": [],
-  "source": "UNKNOWN",
-  "summary": "UNKNOWN",
+  "source": "https://github.com/soumentrivedi/puppet-eclipse_platform",
+  "summary": "Eclipse Platform for Puppet development (using Geppetto)",
   "tags": [],
   "version": "0.1.0"
 }
