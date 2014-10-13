@@ -99,7 +99,8 @@ class eclipse_platform::setup {
     ensure => installed,
     name   => $operatingsystem ? {
       Ubuntu => "openjdk-7-jdk",
-      CentOS => "java-1.7.0-openjdk",
+      OracleLinux => "java-1.7.0-openjdk",
+      default => "java-1.7.0-openjdk",
     }
   }
 
