@@ -85,7 +85,7 @@ class eclipse_platform::setup {
       ensure => "${eclipse_platform::method}",
     }
   }
-  
+
   if ("${eclipse_platform::method}" == 'file') or ("${eclipse_platform::method}" == 'wget') {
     # Put the eclipse icon on the desktop
     file { "eclipse.desktop":
@@ -94,5 +94,14 @@ class eclipse_platform::setup {
       content => template("eclipse_platform/eclipse.desktop.erb")
     }
   }
-create_resources("::eclipse_platform::plugin",$eclipse_platform::pluginshash)
+
+  package { "java-1.7.0":
+    ensure => installed,
+    name   => $operatingsystem ? {
+      Ubuntu => "openjdk-7-jdk",
+      CentOS => "java-1.7.0-openjdk",
+    }
+  }
+
+  create_resources("::eclipse_platform::plugin", $eclipse_platform::pluginshash)
 }
